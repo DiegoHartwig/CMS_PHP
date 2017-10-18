@@ -7,7 +7,7 @@ class Core {
         $url = end($url);
 
         $params = array();
-        if (!empty($url) && $url != '/') {
+        if (!empty($url)) {
             $url = explode('/', $url);
             array_shift($url);
 
@@ -29,7 +29,16 @@ class Core {
             $currentAction = 'index';
         }
 
-        $c = new $currentController();
+        if (file_exists('controllers/' . $currentController . '.php')) {
+            $c = new $currentController();
+        } else {
+            $c = new paginaController();
+            $currentAction = "index";
+            $pNome = explode("Controller", $currentController);
+            $pNome = $pNome[0];
+            $params = array($pNome);
+        }
+
         call_user_func_array(array($c, $currentAction), $params);
     }
 
