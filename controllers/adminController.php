@@ -7,9 +7,34 @@ class adminController extends controller {
     }
 
     public function index() {
-        $dados = array();        
+        $usu = new Usuarios();
+        $usu->verificarLogin();
+        $dados = array();
 
         $this->loadTemplateInAdmin('admin/home', $dados);
+    }
+
+    public function login() {
+
+        $dados = array(
+            'erro' => ''
+        );
+        
+        if(isset($_POST['email']) && !empty($_POST['email'])){
+            $email = addslashes($_POST['email']);
+            $senha = md5($_POST['senha']);
+            
+            $usu = new Usuarios();
+            $dados['erro'] = $usu->logar($email, $senha);
+        }
+
+        $this->loadView("admin/login", $dados);
+    }
+    
+    public function logout(){
+        unset($_SESSION['lgAdmin']);
+        header("Location: " . BASE . "admin/login");
+        exit;
     }
 
 }
