@@ -17,6 +17,10 @@ class controller {
     public function loadTemplate($viewName, $viewData = array()) {
         include 'views/templates/' . $this->config['site_template'] . '.php';
     }
+    
+    public function loadTemplateInAdmin($viewName, $viewData = array()) {
+        include 'views/templates/admin.php';
+    }
 
     public function loadViewInTemplate($viewName, $viewData) {
         extract($viewData);

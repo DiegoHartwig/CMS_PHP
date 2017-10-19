@@ -2,7 +2,7 @@
 
 require 'environment.php';
 
-define("BASE", "http://localhost/CMS/CMS_PHP/");
+define("BASE", "http://localhost/cms/");
 
 global $config;
 $config = array();
