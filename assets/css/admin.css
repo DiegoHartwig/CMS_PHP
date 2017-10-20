@@ -1,0 +1,33 @@
+body{
+    margin: 0; 
+    font-family: Arial;
+    font-size: 12pt;
+}
+.menu{
+    height: 50px;
+    background-color: #003366;
+    color: #FFF;
+}
+.menu a{
+    color: #fff;
+}
+.menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu li{
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor:pointer;
+}
+.menu li:hover{
+    background-color: #FFF;
+    color: #000;
+}
+.container{
+    margin: 20px;
+}
