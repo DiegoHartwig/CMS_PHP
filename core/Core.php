@@ -1,5 +1,16 @@
 <?php
 
+/*
+ * Classe Core
+ *
+ * Core
+ *
+ *
+ * @package CMS
+ * @author Diego Hartwig <hartwig.diego@gmail.com>
+ *
+ */
+
 class Core {
 
     public function run() {

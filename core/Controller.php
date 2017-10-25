@@ -1,5 +1,16 @@
 <?php
 
+/*
+ * Classe Controller
+ *
+ * Controller
+ *
+ *
+ * @package CMS
+ * @author Diego Hartwig <hartwig.diego@gmail.com>
+ *
+ */
+
 class controller {
 
     private $config;
@@ -17,7 +28,7 @@ class controller {
     public function loadTemplate($viewName, $viewData = array()) {
         include 'views/templates/' . $this->config['site_template'] . '.php';
     }
-    
+
     public function loadTemplateInAdmin($viewName, $viewData = array()) {
         include 'views/templates/admin.php';
     }
@@ -29,7 +40,7 @@ class controller {
 
     public function loadMenu() {
         $m = array();
-        $menu = new Menu();        
+        $menu = new Menu();
         $m['menu'] = $menu->getMenu();
 
         $this->loadView("menu", $m);

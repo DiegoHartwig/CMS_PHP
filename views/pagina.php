@@ -1,2 +1,2 @@
-<h1><?php echo $titulo; ?></h1>
-<?php echo $corpo; ?>
+<h1><?php echo utf8_encode($titulo); ?></h1>
+<?php echo utf8_encode($corpo); ?>

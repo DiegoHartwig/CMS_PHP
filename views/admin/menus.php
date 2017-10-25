@@ -1,6 +1,6 @@
 <h1>Menus</h1>
 
-<a href="<?php echo BASE; ?>admin/novoMenu">Add Menu</a><br/><br/>
+<a href="<?php echo BASE; ?>admin/addMenu">Novo Menu</a><br/><br/>
 
 <table border="0" width="100%">
     <tr>

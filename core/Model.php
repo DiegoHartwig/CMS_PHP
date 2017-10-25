@@ -1,5 +1,16 @@
 <?php
 
+/*
+ * Classe model 
+ *
+ * Model 
+ *
+ *
+ * @package CMS
+ * @author Diego Hartwig <hartwig.diego@gmail.com>
+ *
+ */
+
 class model {
 
     protected $db;

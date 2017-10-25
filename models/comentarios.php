@@ -1,5 +1,16 @@
 <?php
 
+/*
+ * Classe model Comentarios
+ *
+ * Model Comentarios
+ *
+ *
+ * @package CMS
+ * @author Diego Hartwig <hartwig.diego@gmail.com>
+ *
+ */
+
 class Comentarios extends model {
 
     public function getComentarios($limit = 0) {

@@ -1,5 +1,16 @@
 <?php
 
+/*
+ * Classe model usuarios
+ *
+ * Model usuarios
+ *
+ *
+ * @package CMS
+ * @author Diego Hartwig <hartwig.diego@gmail.com>
+ *
+ */
+
 class Usuarios extends model {
 
     public function verificarLogin() {

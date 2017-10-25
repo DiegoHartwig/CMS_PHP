@@ -9,6 +9,8 @@
             <ul>
                 <a href="<?php echo BASE; ?>admin"<li>Páginas</li></a> 
                 <a href="<?php echo BASE; ?>admin/menus"<li>Menus</li></a>
+                <a href="<?php echo BASE; ?>admin/config"<li>Configurações</li></a>
+                <a href="<?php echo BASE; ?>admin/logout"<li>Sair</li></a>
             </ul>
         </div>
         <div class="container">

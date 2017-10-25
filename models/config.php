@@ -1,5 +1,16 @@
 <?php
 
+/*
+ * Classe model config
+ *
+ * Model Config
+ *
+ *
+ * @package CMS
+ * @author Diego Hartwig <hartwig.diego@gmail.com>
+ *
+ */
+
 class Config extends model {
 
     public function getConfig() {
@@ -14,6 +25,11 @@ class Config extends model {
             }
             return $array;
         }
+    }
+
+    public function setPropriedade($nome, $valor) {
+
+        $this->db->query("UPDATE config SET valor = '$valor' WHERE nome = '$nome'");
     }
 
 }

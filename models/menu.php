@@ -1,5 +1,16 @@
 <?php
 
+/*
+ * Classe model menu
+ *
+ * Model Menu
+ *
+ *
+ * @package CMS
+ * @author Diego Hartwig <hartwig.diego@gmail.com>
+ *
+ */
+
 class Menu extends model {
 
     public function getMenu($id = 0) {
@@ -26,6 +37,16 @@ class Menu extends model {
     public function delete($id) {
 
         $this->db->query("DELETE FROM menu WHERE id = $id");
+    }
+
+    public function update($nome, $url, $id) {
+
+        $this->db->query("UPDATE menu SET nome = '$nome', url = '$url' WHERE id = '$id'");
+    }
+
+    public function insert($nome, $url) {
+
+        $this->db->query("INSERT INTO menu SET nome = '$nome', url = '$url'");
     }
 
 }
