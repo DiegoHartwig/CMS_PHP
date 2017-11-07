@@ -195,5 +195,20 @@ class adminController extends controller {
 
         $this->loadTemplateInAdmin('admin/addPagina', $dados);
     }
+    
+    public function Imagens(){
+        $u = new Usuarios();
+        $u->verificarLogin();
+        
+        $imagens = new Imagens();
+        
+        $imagens->saveImagens();
+        
+        $dados['imagens'] = $imagens->getImagens();
+        
+        $this->loadTemplateInAdmin('admin/imagens', $dados);        
+        
+        $dados = array();
+    }
 
 }
